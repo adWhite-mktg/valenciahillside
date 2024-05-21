@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* =================================================================== */
+
+        .awc_section-contact-cards {
+            padding-bottom: 50px;
+        }
+
+        .awc_section-contact-cards h2 {
+            font-size: 2.75em;
+            margin: 0 0 25px 0;
+        }
+
+        .awc_section-contact-cards .awc_container-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 55px;
+        }
+
+        .awc_section-contact-cards .awc_contact-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+        }
+
+        .awc_section-contact-cards .awc_contact-card h3 {
+            color: rgba(22, 57, 100, .75);
+            font-size: 1.5em;
+            margin: 0 0 12px 0;
+        }
+
+        .awc_section-contact-cards .awc_contact-card h4 {
+            font-size: 1.55em;
+            margin: 0 0 4px 0;
+        }
+
+        .awc_section-contact-cards .awc_contact-card h5 {
+            font-size: 0.7em;
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+        }
+
+        .awc_section-contact-cards .awc_contact-card .awc_link {
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            text-decoration: none;
+            position: relative;
+            /* Required for positioning the pseudo-element */
+        }
+
+        .awc_section-contact-cards .awc_contact-card .awc_link:hover {
+            text-decoration: none;
+        }
+
+        .awc_section-contact-cards .awc_contact-card .awc_link::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            /* Adjust the position of the underline */
+            right: 0;
+            background-color: #f5833e;
+            transition: width 0.2s ease-in-out;
+        }
+
+        .awc_section-contact-cards .awc_contact-card .awc_link:hover::before {
+            width: 100%;
+        }
+
+        .awc_section-contact-cards .awc_link-phone {
+            margin-top: 8px;
+        }
+
+        .awc_section-contact-cards .awc_contact-card .awc_icon {
+            margin-right: 8px;
+        }
+
+        .awc_section-contact-cards .awc_link-phone .awc_icon-phone {
+            width: 20px;
+        }
+
+        .awc_section-contact-cards .awc_link-email .awc_icon-envelope {
+            width: 20px;
+        }
+
+
+        /* SECTION 2 */
+
+        .awc_section-contact-cards-2 .awc_container-cards {
+            margin-bottom: 50px;
+        }
+
+        .awc_section-contact-cards-2 .awc_wrap-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 26px;
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .awc_section-contact-cards-2 .awc_hrule {
+            flex-grow: 1;
+            height: 1px;
+            margin-top: 8px;
+            background-color: rgba(22, 57, 100, .1);
+            ;
+        }
+
+        .awc_section-contact-cards-2 .awc_subsection-title {
+            font-size: 2em;
+            text-align: center;
+            margin: 0 10px;
+            /* Add some spacing between the title and the lines */
+            white-space: nowrap;
+            /* Ensure the title does not wrap */
+        }
+
+        /*
+ * Typography
+ */
+
+        .face_montserrat-thin {
+            font-family: montserrat, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .face_montserrat-extralight {
+            font-family: montserrat, sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .face_montserrat-light {
+            font-family: montserrat, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .face_montserrat {
+            font-family: "montserrat", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .face_montserrat-italic {
+            font-family: "montserrat", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .face_montserrat-medium {
+            font-family: "montserrat", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .face_montserrat-semibold {
+            font-family: "montserrat", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .face_montserrat-bold {
+            font-family: "montserrat", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .face_montserrat-bold-italic {
+            font-family: "montserrat", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .face_montserrat-alt {
+            font-family: "montserrat-alternates", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .face_montserrat-alt-italic {
+            font-family: "montserrat-alternates", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .face_montserrat-alt-bold {
+            font-family: "montserrat-alternates", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .face_montserrat-alt-bold-italic {
+            font-family: "montserrat-alternates", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .face_ivyora {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .face_ivyora-italic {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .face_ivyora-thin {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .face_ivyora-thin-italic {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .face_ivyora-medium {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .face_ivyora-bold {
+            font-family: ivyora-display, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /*
+ * Color
+ */
+
+        .text-vh-brand-med,
+        .text-vh-orange {
+            color: #f5833e;
+        }
+
+        .bg-vh-brand-med,
+        .bg-vh-orange {
+            background-color: #f5833e;
+        }
+
+        .text-vh-brand-dark,
+        .text-vh-evergreen {
+            color: #163934;
+        }
+
+        .bg-vh-brand-dark,
+        .bg-vh-brand-evergreen {
+            background-color: #163934;
+        }
+
+        .text-vh-brand-light-cool,
+        .text-vh-mint-cream {
+            color: #e6f0eb;
+        }
+
+        .bg-vh-brand-light-cool,
+        .bg-vh-brand-mint-cream {
+            background-color: #e6f0eb;
+        }
+
+        .text-vh-brand-light-warm,
+        .text-vh-pastel-yellow {
+            color: #faf8c2;
+        }
+
+        .bg-vh-brand-light-warm,
+        .bg-vh-brand-pastel-yellow {
+            background-color: #faf8c2;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        /*
+ * Utils
+ */
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="awc_cards awc_section-contact-cards awc_section-contact-cards-2">
+        <h2 class="text-center text-vh-evergreen face_ivyora">Team Directory</h2>
+        <!-- ROW 1 -->
+        <div class="awc_wrap-cc">
+            <div class="awc_wrap-title">
+                <div class="awc_hrule"></div>
+                <h3 class="awc_subsection-title text-vh-evergreen face_ivyora">Hillwood</h3>
+                <div class="awc_hrule"></div>
+            </div>
+            <div class="awc_container-cards">
+                <!-- Card 01 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Lori Evans</h4>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:832-937-9538"><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+18329379538">832-937-9538</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:lori.evans@hillwood.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">lori.evans@hillwood.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="awc_wrap-cc">
+            <div class="awc_wrap-title">
+                <div class="awc_hrule"></div>
+                <h3 class="awc_subsection-title text-vh-evergreen face_ivyora">Coventry Homes</h3>
+                <div class="awc_hrule"></div>
+            </div>
+            <div class="awc_container-cards">
+                <!-- Card 02 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Kelly Theisen</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:832-937-9538"><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+18329379538">832-937-9538</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:lori.evans@hillwood.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">lori.evans@hillwood.com</a>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Danielle Hadley</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:281-627-0102"><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+12816270102">281-627-0102</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:dhadley@coventryhomes.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">dhadley@coventryhomes.com</a>
+                </div>
+
+                <!-- Card 04 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Rachel Gintert</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:rachel.gintert@coventryhomes.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">rachel.gintert@coventryhomes.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="awc_wrap-cc">
+            <div class="awc_wrap-title">
+                <div class="awc_hrule"></div>
+                <h3 class="awc_subsection-title text-vh-evergreen face_ivyora">Perry Homes</h3>
+                <div class="awc_hrule"></div>
+            </div>
+            <div class="awc_container-cards">
+                <!-- Card 05 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Danial Shaikh</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:281-210-8114 "><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+12812108114">281-210-8114</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:danial.shaikh@perryhomes.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">danial.shaikh@perryhomes.com</a>
+                </div>
+
+                <!-- Card 06 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Elke Perry</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:832-573-1313"><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+18325731313">832-573-1313</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:elke.perry@perryhomes.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">elke.perry@perryhomes.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="awc_wrap-cc">
+            <div class="awc_wrap-title">
+                <div class="awc_hrule"></div>
+                <h3 class="awc_subsection-title text-vh-evergreen face_ivyora">Pulte Homes</h3>
+                <div class="awc_hrule"></div>
+            </div>
+            <div class="awc_container-cards">
+                <!-- Card 07 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Bradley Cain</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen" href="tel:832-707-3708"><img
+                            class="awc_icon awc_icon-phone"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-phone-orange.svg"
+                            alt="phone icon"><span itemprop="telephone" content="+18327073708">832-707-3708</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:bradley.cain@pulte.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">bradley.cain@pulte.com</a>
+                </div>
+
+                <!-- Card 08 -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat-light">Kevin Brown</h4>
+                    <h5 class="face_montserrat-semibold text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                        href="mailto:kevin.brown@centex.com"><img class="awc_icon awc_icon-envelope"
+                            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/icon-mail-envelope-orange.svg"
+                            alt="mailing envelope icon">kevin.brown@centex.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
