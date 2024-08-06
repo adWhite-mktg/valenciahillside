@@ -16,6 +16,7 @@
         body {
             margin: 0;
             padding: 0;
+            font-size: 16px;
         }
 
         /* =================================================================== */
@@ -27,6 +28,7 @@
         .awc_section-contact-cards {
             padding-top: 30px;
             padding-bottom: 0;
+            background-color: #e8f0e8;
         }
 
         .awc_section-contact-cards h2 {
@@ -36,8 +38,6 @@
 
         .awc_section-contact-cards .awc_wrap-cc {
             padding: 40px 0 40px;
-            background: rgb(28, 86, 73);
-            background: linear-gradient(0deg, rgba(28, 86, 73, 0.01) 0%, rgba(28, 86, 73, 0) 10%, rgba(28, 86, 73, 0) 100%);
         }
 
         .awc_section-contact-cards .awc_container-cards {
@@ -56,41 +56,45 @@
         }
 
         .awc_section-contact-cards .title-logo {
-            max-width: 250px;
+            max-width: 220px;
             height: auto;
-            margin: 0 auto 25px;
+            margin: 0 auto 45px;
             display: block;
+        }
+
+        .awc_max-150 {
+            max-width: 150px !important;
         }
 
         .awc_section-contact-cards .awc_contact-card h3 {
             color: rgba(22, 57, 100, .75);
-            font-size: 1.5em;
+            font-size: 2.75rem;
             margin: 0 0 12px 0;
         }
 
         .awc_section-contact-cards .awc_contact-card h4 {
-            font-size: 1.2em;
+            font-size: 1.25rem;
             margin: 0 0 4px 0;
             text-transform: uppercase;
         }
 
         .awc_section-contact-cards .awc_contact-card h5 {
-            font-size: 1.2em;
+            font-size: 1.25rem;
             margin: 0 0 12px 0;
         }
 
         .awc_section-contact-cards .awc_contact-card .awc_link {
-            font-size: 1.1em;
+            font-size: 1.25em;
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
             text-decoration: none;
             position: relative;
             /* Required for positioning the pseudo-element */
         }
 
         .awc_section-contact-cards .awc_contact-card .awc_link:hover {
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         .awc_section-contact-cards .awc_contact-card .awc_link::before {
@@ -105,9 +109,9 @@
             transition: width 0.2s ease-in-out;
         }
 
-        .awc_section-contact-cards .awc_contact-card .awc_link:hover::before {
+        /* .awc_section-contact-cards .awc_contact-card .awc_link:hover::before {
             width: 100%;
-        }
+        } */
 
         .awc_section-contact-cards .awc_link-phone {
             margin-top: 8px;
@@ -136,8 +140,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 35px;
-            width: 100%;
+            margin: 0 auto;
+            width: 60%;
         }
 
         .awc_section-contact-cards-2 .awc_hrule {
@@ -149,9 +153,8 @@
         }
 
         .awc_section-contact-cards-2 .awc_subsection-title {
-            font-size: 1.5em !important;
+            font-size: 2.75rem !important;
             text-align: center;
-            text-transform: uppercase;
             margin: 0 10px;
             /* Add some spacing between the title and the lines */
             white-space: nowrap;
@@ -330,39 +333,60 @@
         .text-center {
             text-align: center;
         }
+
+        .awc_mb-10 {
+            margin-bottom: 10px !important;
+        }
+
+        .awc_mb-25 {
+            margin-bottom: 25px !important;
+        }
+
+        .awc_mb-50 {
+            margin-bottom: 50px !important;
+        }
     </style>
 </head>
 
 <body>
     <section class="awc_cards awc_section-contact-cards awc_section-contact-cards-2">
-        <h2 class="text-center text-vh-evergreen face_ivyora">Team Directory</h2>
-        <!-- ROW 1 -->
+        <div class="awc_wrap-title">
+            <div class="awc_hrule"></div>
+            <h3 class="awc_subsection-title text-vh-evergreen face_ivyora">Hillwood</h3>
+            <div class="awc_hrule"></div>
+        </div>
+
+        <!-- ROW 0 -->
         <div class="awc_wrap-cc">
-            <img class="title-logo"
-                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-hillwood.jpeg"
-                alt="Hillwood logo">
+
             <div class="awc_container-cards">
                 <!-- Card 01 -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="face_montserrat-light text-center text-vh-evergreen">Lori Evans</h4>
+                    <h4 class="face_montserrat text-center text-vh-evergreen">Lori Evans</h4>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:281-941-6551"><span itemprop="telephone" content="+12819416551">281-941-6551</span></a>
-                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-evergreen"
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
                         href="mailto:lori.evans@hillwood.com">lori.evans@hillwood.com</a>
                 </div>
             </div>
         </div>
 
-        <!-- ROW 2 -->
+        <div class="awc_wrap-title">
+            <div class="awc_hrule"></div>
+            <h3 class="awc_subsection-title text-vh-evergreen face_ivyora awc_mb-10">Our Builders</h3>
+            <div class="awc_hrule"></div>
+        </div>
+
+        <!-- ROW :: Coventry -->
         <div class="awc_wrap-cc">
             <img class="title-logo"
-                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/val-builder-carousel/Valencia%2050%20Representative%20Photos/logo-coventry-homes.png"
+                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-coventry-green@2x.png"
                 alt="Coventry Homes logo">
             <div class="awc_container-cards">
-                <!-- Card 02 -->
+                <!-- Card -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Kelly Theisen</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Kelly Theisen</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:832-405-1317"><span itemprop="telephone" content="+18324051317">832-405-1317</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
@@ -371,8 +395,8 @@
 
                 <!-- Card 03 -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Danielle Hadley</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Danielle Hadley</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:281-627-0102"><span itemprop="telephone" content="+12816270102">281-627-0102</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
@@ -385,41 +409,73 @@
         <!-- ROW 3 -->
         <div class="awc_wrap-cc">
             <img class="title-logo"
-                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-perry-homes@2x.png"
+                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-perry-green.png"
                 alt="Perry Homes logo">
             <div class="awc_container-cards">
-                <!-- Card 05 -->
+                <!-- Card -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Danial Shaikh</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Danial Shaikh</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:281-210-8114 "><span itemprop="telephone" content="+12812108114">281-210-8114</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
                         href="mailto:danial.shaikh@perryhomes.com">danial.shaikh@perryhomes.com</a>
                 </div>
 
-                <!-- Card 06 -->
+                <!-- Card -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Elke Perry</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Elke Perry</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:832-573-1313"><span itemprop="telephone" content="+18325731313">832-573-1313</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
                         href="mailto:elke.perry@perryhomes.com">elke.perry@perryhomes.com</a>
                 </div>
+
+                <!-- Card -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Michelle Reliford</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
+                        href="tel:225-588-6989 "><span itemprop="telephone" content="+12255886989">225-588-6989</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
+                        href="mailto:michelle.reliford@perryhomes.com">michelle.reliford@perryhomes.com</a>
+                </div>
+
+                <!-- Card -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Tie Griffin</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
+                        href="tel:832-760-2104"><span itemprop="telephone" content="+18327602104">832-760-2104</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
+                        href="mailto:tie.griffin@perryhomes.com">tie.griffin@perryhomes.com</a>
+                </div>
+
+                <!-- Card -->
+                <div class="awc_card awc_contact-card">
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Kevin Scott</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
+                    <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
+                        href="tel:713-819-9199"><span itemprop="telephone" content="+17138199199">713-819-9199</span></a>
+                    <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
+                        href="mailto:kevin.scott@perryhomes.com">kevin.scott@perryhomes.com</a>
+                </div>
+
+
             </div>
         </div>
 
         <!-- ROW 4 -->
         <div class="awc_wrap-cc">
-            <img class="title-logo"
-                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-pulte-homes.png"
+            <img class="title-logo awc_max-150"
+                src="https://3928035.fs1.hubspotusercontent-na1.net/hubfs/3928035/Valencia/Valencia%20img/logo-pulte-green@2x.png"
                 alt="Pulte Homes logo">
             <div class="awc_container-cards">
                 <!-- Card 07 -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Bradley Cain</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Bradley Cain</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:832-707-3708"><span itemprop="telephone" content="+18327073708">832-707-3708</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
@@ -428,8 +484,8 @@
 
                 <!-- Card 08 -->
                 <div class="awc_card awc_contact-card">
-                    <h4 class="text-center face_montserrat-light text-vh-evergreen">Kevin Brown</h4>
-                    <h5 class="face_montserrat-light text-vh-evergreen">Sales Counselor</h5>
+                    <h4 class="text-center face_montserrat text-vh-evergreen">Kevin Brown</h4>
+                    <h5 class="face_montserrat text-vh-evergreen">Sales Counselor</h5>
                     <a class="awc_link awc_link-phone face_montserrat text-vh-evergreen"
                         href="tel:832-845-5108"><span itemprop="telephone" content="+18328455108">832-845-5108</span></a>
                     <a class="awc_link awc_icon awc_link-email face_montserrat text-vh-orange"
